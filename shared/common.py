@@ -5,7 +5,10 @@ import os
 import datetime
 import pyjq
 import sys
-import urllib.parse
+try:
+    from urllib.parse import urlparse
+except ImportError:
+    from urlparse import urlparse
 from netaddr import IPNetwork
 
 class Severity:
